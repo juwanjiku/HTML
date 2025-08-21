@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace; 
+            background-color: white;
+            color: darkgrey;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: darkblue;
+            text-align: center;
+        }
+        h1 {
+            background-color: darkblue;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 5px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .list-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .list {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        li {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .language-card{
+            text-align: center;
+            margin: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .language-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+        .fun-fact {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .code-snippet {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 5px 0;
+        }
+</style>
+</head>
+<body>
+
+    <h1>Programming Languages</h1>
+    <p>Welcome to the ultimate programming language comparison!Find your perfect coding companion below</p>
+    <h2>Language Comparison Table</h2>
+    <table>
+        <tr>
+            <th>Language</th>
+            <th>Difficulty</th>
+            <th>Best For</th>
+            <th>Fun Level</th>
+            <th>Job Demand</th>
+        </tr>
+        <tr>
+            <td>python</td>
+            <td>beginner</td>
+            <td>data science, Ai, web</td>
+            <td>9/10</td>
+            <td>very high</td>
+        </tr>
+         <tr>
+            <td>Java</td>
+            <td>Intermediate</td>
+            <td>Enterprise Apps, Android</td>
+            <td>6/10</td>
+            <td>High</td>
+         </tr>
+         <tr>
+            <td>JavaScript</td>
+            <td>Beginner</td>
+            <td>Web Development</td>
+            <td>8/10</td>
+            <td>Very High</td>
+        </tr>
+        <tr>
+            <td>Rust</td>
+            <td>Advanced</td>
+            <td>System Programming</td>
+            <td>7/10</td>
+            <td>Growing</td>
+         </tr>
+    </table>
+
+    <div class="list-container">
+        <div class="list">
+            <h3>Top Reasons to Learn Programming</h3>
+            <ul>
+                <li>Build your own websites, apps and games</li>
+                <li>Endless learning and problem solving</li>
+                <li>High demand and greater career opportunity</li>
+                <li>Automte boring tasks</li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <h3>Programming terms</h3>
+            <ul>
+                <li>Heinsenbug: A bug that disapears when you try to debug it.</li>
+                <li>Rubber Duck Debugging: Explaining your code to a rubber duck.</li>
+                <li>Yoda Conditions: Writing if conditions backwards<br>
+                <span class="code-snippet">if (42 == answer) {...}</span>
+                </li>
+                <li>Bike-Shedding: Arguing over trivial code details</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Meet the Languages</h2>
+    <div class="image-container">
+        <div class="language-card">
+            <img src="https://cdn-icons-png,flaticon.com/512/5968/5968282.png" alt="Python logo featuring two intert wined snakes, one blue and one yellow">
+            <h3>Python</h3>
+            <p class="fun-fact">Named after Monty Python, not the snake!</p>
+        </div>
+
+        <div class="language-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="Java logo featuring a steaming cup of coffee">
+            <h3>Java</h3>
+            <p class="fun-fact">Originally called Oak, named after the coffee!</p>
+        </div>
+
+        <div class="language-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript logo featuring a yellow square with the letters JS">
+            <h3>JavaScript</h3>
+            <p class="fun-fact">Created in just 10 days!</p>
+        </div>
+    </div>
+</body>
