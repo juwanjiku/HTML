@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Website feedback form</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            color: #000;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+         fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: 600;
+            padding: 0 10px;
+        }
+        .checkbox-group, .radio-group {
+            margin-bottom: 10px;
+        }
+         button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .required {
+            color: #e74c3c;
+        }
+        p {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Website Feedback Form</h1>
+        <p>We're constantly working to improve your experience. Please share your thoughts with us!</p>
+        <form action="/submit-feedback" method="post">
+
+            <!--text input with label and placeholder-->
+            <div class="form-group">
+                <label for="fullname">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" placeholder="e.g., Julia Njoroge" required aria-required="true">
+            </div>
+
+    <!--email input with label and placeholder-->
+    <div class="form-group">
+        <label for="email">Email Address<span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="njorogejulia@gmail.com" required aria-required="true">
+    </div>
+
+    <!--date input-->
+    <div class="form-group">
+        <label for="visit-date">Date of Visit</label>
+        <input type="visit-date" id="visit-date" name="visit-date">
+    </div>
+
+    <!--dropdown selection-->
+    <div class="form-group">
+        <label for="topic">What does your feedback relate to?</label>
+        <select id="topic" name="topic">
+            <option value=" ">--please choose a topic--</option>
+            <option value="design">website design and usability</option>
+            <option value="content">content quality</option>
+            <option value="performance">website speed and performance</option>
+            <option value="bug">bug report</option>
+            <option value="suggestion">feature suggestion</option>
+            <option value="other">other</option>
+        </select>
+    </div>
+
+    <!--radio buttons inside a group fieldset for grouping-->
+    <fieldset>
+        <legend>How would you rate your overall experience?<span class="required">*</span></legend>
+        <div class="radio-group">
+            <input type="radio" id="rating-5" name="rating" value="required">
+            <label for="rating-5">Excellent</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="rating-4" name="rating" value="4">
+                    <label for="rating-4">Very Good</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="rating-3" name="rating" value="3">
+                    <label for="rating-3">Neutral</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="rating-2" name="rating" value="2">
+                    <label for="rating-2">Poor</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="rating-1" name="rating" value="1">
+                    <label for="rating-1">Terrible</label>
+    </div>
+    </fieldset>
+
+     <!-- Checkboxes inside a Fieldset for Grouping -->
+            <fieldset>
+                <legend>Which areas would you like to see improved? (Select all that apply)</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="improve-mobile" name="improvements" value="mobile">
+                    <label for="improve-mobile">Mobile Experience</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="improve-content" name="improvements" value="content">
+                    <label for="improve-content">Article Quality</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="improve-search" name="improvements" value="search">
+                     <label for="improve-search">Search Functionality</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="improve-speed" name="improvements" value="speed">
+                    <label for="improve-speed">Page Loading Speed</label>
+                </div>
+            </fieldset>
+
+     <!-- Textarea for longer input -->
+            <div class="form-group">
+                <label for="comments">Please share your detailed feedback or suggestion: <span class="required">*</span></label>
+                <textarea id="comments" name="comments" placeholder="What did you like? What can we do better? Be as specific as you'd like..." required aria-required="true"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" aria-label="Submit your feedback form">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
