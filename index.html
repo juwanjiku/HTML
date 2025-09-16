@@ -156,7 +156,7 @@
   <div class="wrap" role="application">
     <header>
       <h1>My To‑Do List</h1>
-      <p>Quickly add tasks, mark complete, and remove them — keyboard friendly.</p>
+      <p>Quickly add tasks, mark complete, and/or remove them. </p>
     </header>
 
     <!-- Add task form -->
@@ -200,7 +200,7 @@
       if(!tasks.length){
         const li = document.createElement('li');
         li.className = 'empty';
-        li.textContent = 'No tasks yet — add one above ✍️';
+        li.textContent = 'No tasks yet, add one✍️';
         taskList.appendChild(li);
         taskCount.textContent = '0 tasks';
         return;
@@ -309,3 +309,4 @@
   </script>
 </body>
 </html>
+
